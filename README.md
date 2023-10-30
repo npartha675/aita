@@ -1,5 +1,5 @@
 # Aita
-Congressional App Challenge: AITA - AI For All: Fair, Fun, Personalized
+Congressional App Challenge: AITA - AI For All: Fair, Fun, Personal
 
 V 1.0; October 29,2023; Nidhi Parthasarathy
 
