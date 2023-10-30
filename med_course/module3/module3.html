@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="module3.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <title>Learning Python</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <!-- <li><a href="index.html">Home</a></li> -->
+            <li><a href="/Users/nidhiparthasarathy/Desktop/congressionalstuffz/med_course/course.html"><i class="fas fa-home"></i> ...Home</a></li>
+            <!-- Add more links to other sections if needed -->
+        </ul>
+    </nav>
+    <header>
+        
+        <h1>Important Python Libraries</h1>
+    </header>
+    <main>
+        <p>Now that we understand python we can learn about some of the important libraries in python that are very useful in Machine Learning.</p>
+
+        <h3><i>Getting Started with Pandas: Your Gateway to Data Manipulation</i></h3>
+
+        <p>Pandas is a fundamental library for data analysis in Python. It provides essential tools for beginners to manipulate, clean, and explore data effectively. In this lesson, we will cover key Pandas concepts through practical examples, with a focus on data handling. </p>
+
+        <h3>What is Pandas?</h3>
+        <p>
+            Pandas is a Python library for data manipulation. It offers data structures like DataFrames and Series, enabling you to work with structured data seamlessly. You can think of DataFrames as tables where data is organized into rows and columns.
+        </p>
+
+        <h3>Installing Pandas</h3>
+        <p>
+            To use Pandas, you need to install it first. Open your terminal or command prompt and run the following command:
+        </p>
+
+        <pre><code class="language-python">
+    pip install pandas
+        </code></pre>
+
+        <h3>Importing Pandas</h3>
+        <p>
+            Before we can use Pandas, we must import it into our Python environment (Google Colab):
+        </p>
+        <pre><code class="language-python">
+    import pandas as pd
+        </code></pre>
+
+        <h3>
+            Loading Data
+        </h3>
+        <p>
+            One of Pandas' superpowers is its ability to load data from various sources. For instance, you can load data from a CSV file with a single line of code:
+        </p>
+        <pre><code class="language-python">
+    # Load data from a CSV file
+    data = pd.read_csv('your_dataset.csv')
+        </code></pre>
+
+        <h3>Exploring Data</h3>
+        <p>Now, let's explore some essential Pandas functions for data exploration.        </p>
+        <h4>•) Viewing Data</h4>
+        <p>You can quickly take a peek at your data using the head() function:        </p>
+        <pre><code class="language-python">
+    # Display the first few rows of the DataFrame
+    print(data.head())
+        </code></pre>
+        <p>You can also add a number as a parameter to indicate how many rows you want to see</p>
+        <pre><code class="language-python">
+    # Display the first 5 rows of the DataFrame
+    print(data.head(5))
+        </code></pre>
+
+        <h4>•) Data Types</h4>
+        <p>Pandas makes it simple to generate summary statistics for your dataset:</p>
+        <pre><code class="language-python">
+    # Calculate summary statistics like mean, min, max, and more
+    print(data.describe())
+        </code></pre>
+
+        <h4>•) Summary Statistics</h4>
+        <p>Pandas offers multiple ways to manipulate your data.        </p>
+        <pre><code class="language-python">
+    # Display the data types of each column
+    print(data.dtypes)
+        </code></pre>
+
+        <h3>Data Manipulation</h3>
+        <p>Now, let's explore some essential Pandas functions for data exploration.        </p>
+        <h4>•) Filtering Data        </h4>
+        <p>Filtering data based on specific conditions is a common task:</p>
+        <pre><code class="language-python">
+    # Filter data where a column meets a condition
+    filtered_data = data[data['column_name'] > 10]
+        </code></pre>
+
+        <h4>•) Renaming Columns</h4>
+        <p>You can easily rename columns for clarity:</p>
+        <pre><code class="language-python">
+    # Rename a column
+    data = data.rename(columns={'old_name': 'new_name'})
+        </code></pre>
+
+        <h4>•) Handling Missing Data</h4>
+        <p>Pandas provides ways to deal with missing values:</p>
+        <pre><code class="language-python">
+    # Drop rows with missing values
+    data = data.dropna()
+            
+    # Fill missing values with a specific value
+    data['column_name'] = data['column_name'].fillna(0)
+        </code></pre>
+
+        <h4>•) Sorting Data</h4>
+        <p>Sort data based on column values:</p>
+        <pre><code class="language-python">
+    # Sort data by a specific column in ascending order
+    sorted_data = data.sort_values(by='column_name')
+        </code></pre>
+
+        <h4>•) Grouping and Aggregating Data</h4>
+        <p>Group data for summary statistics:</p>
+        <pre><code class="language-python">
+    # Group data by a column and calculate the mean
+    grouped_data = data.groupby('group_column')['value_column'].mean()
+        </code></pre>
+
+        <h3>Conclusion</h3>
+
+        <p>Pandas is an invaluable tool for beginners and professionals alike when working with data in Python. In this lesson, we've covered essential data loading, exploration, and manipulation functions that are vital for data analysis. As you continue your data journey, mastering Pandas will be one of your strongest assets.        </p>
+        <p>Experiment with these Pandas functions and apply them to your datasets. The more you practice, the more confident you'll become in using Pandas for your data analysis needs. Happy data manipulation!        </p>
+
+        <p>Please learn more about Pandas <a href="https://www.w3schools.com/python/pandas/default.asp">here</a> or through the Pandas <a href="https://pandas.pydata.org/docs/">documentation</a> before completing the Test For Knowledge section. The content here is only a quick overview of the multitude of capabilities pandas has.</p>
+        <!-- Add more sections as needed -->
+        <div id="quiz">
+            <h3>Test Your Knowledge</h3> <!-- Change the header size to h3 -->
+            <p>Complete the following excercises in <a href="https://w3schools.com/python/pandas/pandas_exercises.asp">this</a> link.</p>
+        </div>
+
+        <div class="chatbox">
+            <div class="chatheader">
+                eMiLy Chat Bot
+                <button class="minimize-btn" onclick="toggleChat()">Maximize</button>
+            </div>
+            <div class="chatlogs" id="chatlogs">
+                <div class="chat user"></div>
+                <div class="chat ai">Hi, I am eMiLy! How may I help you today?</div>
+                <!-- Chat messages will be added here using JavaScript -->
+            </div>            
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </main>
+    <!-- <div id="chatbot-popup">
+        <div id="chatbot">
+            <div id="chat-window">
+                <div id="chat-output"></div>
+                <input type="text" id="user-input" placeholder="Ask eMiLy for help!">
+            </div>
+        </div>
+    </div> -->
+    <script src="module3.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

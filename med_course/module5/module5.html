@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="module5.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/themes/prism.min.css">
+    <title>Computer Vision</title>
+</head>
+<body>
+    <nav class="navbar">
+        <ul>
+            <!-- <li><a href="index.html">Home</a></li> -->
+            <li><a href="/Users/nidhiparthasarathy/Desktop/congressionalstuffz/med_course/course.html"><i class="fas fa-home"></i> ...Home</a></li>
+            <!-- Add more links to other sections if needed -->
+        </ul>
+    </nav>
+    <header>
+        
+        <h1>Learning about Computer Vision</h1>
+    </header>
+    <main>
+        <p>Computer vision is a fascinating and rapidly evolving field of artificial intelligence and computer science that enables machines to interpret and understand the visual world. It equips computers with the ability to extract meaningful information from images and videos, much like the human visual system. In essence, computer vision seeks to replicate human vision and perception in a machine, allowing it to "see" and interpret visual data.
+        </p>
+
+        <h3>Applications of Computer Vision</h3>
+
+        <p>The importance of computer vision extends to a wide range of applications across various industries, making it a transformative technology with a profound impact on our daily lives. Some key areas where computer vision finds application include:
+        </p>
+
+        <h4>1. Object Recognition: </h4>
+        <p>
+            Computer vision systems can identify and classify objects within images or video streams, enabling applications like facial recognition, autonomous vehicles, and security systems.
+        </p>
+
+        <h4>2. Image Analysis:</h3>
+        <p>
+            They can analyze medical images, such as X-rays and MRIs, to assist in disease diagnosis and treatment planning.
+        </p>
+
+        <h4>3. Augmented Reality (AR) and Virtual Reality (VR):</h4>
+        <p>
+            Computer vision is the backbone of AR and VR applications, enhancing the user's visual experience by overlaying digital information on the real world.
+        </p>
+
+        <h4>
+            4. Robotics: 
+        </h4>
+        <p>
+            It plays a crucial role in enabling robots to navigate and interact with their environments, performing tasks like object manipulation and navigation.
+        </p>
+
+        <h4>
+            5. Surveillance: 
+        </h4>
+        <p>
+            Computer vision systems can monitor and analyze video feeds for security and safety applications.
+        </p>
+
+        <h4>
+            6. Industrial Automation:
+        </h4>
+        <p>
+            It is used in quality control, product inspection, and process optimization in manufacturing.
+        </p>
+
+        <h4>
+            7. Entertainment:
+        </h4>
+        <p>
+            It powers the creation of special effects, character animation, and video game graphics.
+        </p>
+
+
+        <h3>Intro to Neural Networks and Convolutional Neural Networks</h3>
+        <p>The core technology behind computer vision is the Convolutional Neural Network (CNN), which is inspired by the structure of the human visual system. CNNs are capable of learning and recognizing patterns, features, and objects within images, making them the foundation of many computer vision applications.        </p>
+        <p>In this module, we will delve into the fundamentals of computer vision, including the workings of CNNs, image processing techniques, and the powerful concept of transfer learning. You will gain the knowledge and skills needed to build, train, and deploy computer vision models for a variety of applications, paving the way for you to explore the exciting world of visual intelligence.
+        </p>
+        
+        <h4>Neural Networks:</h4>
+        <p>Neural networks, often referred to as artificial neural networks (ANNs), are a fundamental component of modern machine learning and artificial intelligence. They are designed to mimic the structure and function of the human brain to solve complex problems and make predictions. Neural networks are composed of interconnected artificial neurons, organized into layers, with each neuron processing and transmitting information.        </p>
+
+        <p>The core components of a neural network include:        </p>
+
+        <ul>
+            <li><b>Input Layer:</b> This layer receives data, which can be in the form of numerical features or pixels from an image."
+            </li>
+            <li><b>Hidden Layers:</b> These intermediate layers between the input and output layers contain neurons that perform computations and apply weights to the input data."
+            </li>
+            <li><b>Output Layer:</b> This layer produces the network's predictions or classifications based on the information processed in the hidden layers.
+            </li>
+          </ul>
+
+          <img src="https://assets-global.website-files.com/5d7b77b063a9066d83e1209c/60ee08e5f4978a3485339ed5_layers.png" alt="AI, ML, DL Image" width="500" height="300">
+          <p>Neural networks are capable of learning patterns, relationships, and representations within data. Through a process known as training, neural networks adjust their internal parameters (weights and biases) to minimize the difference between their predictions and the actual target values in a training dataset. This training process is typically carried out using optimization algorithms like stochastic gradient descent.
+          </p>
+
+          <p>Try out some different combinations of neural networks and layers on this <a href="https://playground.tensorflow.org/#activation=tanh&batchSize=10&dataset=circle&regDataset=reg-plane&learningRate=0.03&regularizationRate=0&noise=0&networkShape=4,2&seed=0.24377&showTestData=false&discretize=false&percTrainData=50&x=true&y=true&xTimesY=false&xSquared=false&ySquared=false&cosX=false&sinX=false&cosY=false&sinY=false&collectStats=false&problem=classification&initZero=false&hideText=false">site</a> to see how well it is able to classify.</p>
+
+
+        <h4>Convolutional Neural Networks (CNNs):
+        </h4>
+        <p>Convolutional Neural Networks (CNNs) are a specialized type of neural network designed for processing grid-like data, such as images and videos. They are particularly effective in computer vision tasks. CNNs have revolutionized the field of computer vision by providing a structured and efficient way to learn features from visual data.        </p>
+        <p>Key characteristics of CNNs include:        </p>
+        <ul>
+            <li><b>Convolutional Layers:</b> CNNs use convolutional layers to automatically detect and learn features from images. Convolution involves sliding small filters (also called kernels) across the input image to detect patterns like edges, corners, and textures."
+            </li>
+            <li><b>Pooling Layers: </b> Pooling layers reduce the spatial dimensions of the data while retaining essential information. Max-pooling and average-pooling are common techniques to downsample feature maps.
+            </li>
+            <li><b>Fully Connected Layers:</b>  These layers are used for making final predictions or classifications, often at the end of the network architecture.
+            </li>
+          </ul>
+
+        <p>CNNs excel at tasks like image classification, object detection, and image segmentation because they can capture hierarchical and spatial features. They have become the foundation for a wide range of applications, including self-driving cars, medical image analysis, and facial recognition systems.        </p>
+
+        <p>Watch this video on CNNs:</p>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/QzY57FaENXg" frameborder="0" allowfullscreen></iframe>
+
+
+        <h3>Building CNNs</h3>
+        <p>Here is an example on how to code a CNN. This is for classifying hand written digits from an MNist dataset.</p>
+        <pre><code class="language-python">
+    # Import necessary libraries
+    import tensorflow as tf
+    from tensorflow import keras
+    from tensorflow.keras import layers
+            
+    # Load the MNIST dataset
+    mnist = keras.datasets.mnist
+    (x_train, y_train), (x_test, y_test) = mnist.load_data()
+            
+    # Preprocess the data
+    x_train, x_test = x_train / 255.0, x_test / 255.0
+            
+    # Build the CNN model
+    model = keras.models.Sequential([
+        layers.Conv2D(32, (3, 3), activation='relu', input_shape=(28, 28, 1)),
+        layers.MaxPooling2D((2, 2)),
+        layers.Conv2D(64, (3, 3), activation='relu'),
+        layers.MaxPooling2D((2, 2)),
+        layers.Conv2D(64, (3, 3), activation='relu'),
+        layers.Flatten(),
+        layers.Dense(64, activation='relu'),
+        layers.Dense(10, activation='softmax')
+    ])
+            
+    # Compile the model
+    model.compile(optimizer='adam',
+                    loss='sparse_categorical_crossentropy',
+                    metrics=['accuracy'])
+            
+    # Train the model
+    model.fit(x_train.reshape(-1, 28, 28, 1), y_train, epochs=5)
+            
+    # Evaluate the model
+    test_loss, test_acc = model.evaluate(x_test.reshape(-1, 28, 28, 1), y_test, verbose=2)
+    print(f"\nTest accuracy: {test_acc}")
+            
+        </code></pre>
+
+        <h3>Introduction to Activation Functions and Optimizers in Deep Learning        </h3>
+        <p>In previous example you may have seen something called an activation function and an optimizer.</p>
+        
+        <h4>Activation Functions:</h4>
+        <p>Activation functions are critical in neural networks as they introduce non-linearity into the model, allowing it to learn complex relationships in the data. They serve as the "neurons" of the network, processing input data and passing the result to the next layer. Activation functions enable neural networks to approximate any non-linear function, making them highly expressive and capable of handling a wide range of problems.        </p>
+        <p>There are several common activation functions, including:        </p>
+        <ul>
+            <li><b>Sigmoid:</b> The sigmoid function maps input values to a range between 0 and 1. It is commonly used in the output layer of binary classification models.
+            </li>
+            <li><b>Hyperbolic Tangent (tanh): </b> The tanh function maps input values to a range between -1 and 1. It is often used in hidden layers of neural networks.
+            </li>
+            <li><b>Rectified Linear Unit (ReLU): </b> ReLU is one of the most widely used activation functions. It replaces negative values with zero, allowing for efficient training and preventing the vanishing gradient problem.
+            </li>
+            <li><b>Leaky ReLU: </b> Leaky ReLU is a variation of ReLU that allows a small, non-zero gradient for negative input values, addressing the dying ReLU problem.
+            </li>
+            <li><b>Exponential Linear Unit (ELU): </b> ELU is an alternative to Leaky ReLU that smoothly handles both positive and negative values, reducing the likelihood of dead neurons.
+            </li>
+          </ul>
+        <p>Understanding the characteristics of different activation functions and choosing the appropriate one for a given task is a critical aspect of building effective neural network models.
+        </p>
+
+        <h4>Optimizers:        </h4>
+        <p>Optimizers are algorithms used to update the model's parameters during training, with the goal of minimizing a loss function. They play a central role in training neural networks by finding the optimal set of weights and biases that lead to the best model performance. Different optimizers employ various strategies to navigate the model's parameter space efficiently.
+        </p>
+        <p>Some commonly used optimizers include:</p>
+        <ul>
+            <li><b>Stochastic Gradient Descent (SGD): </b>  SGD is a classic optimization algorithm that updates the model's parameters based on the gradient of the loss with respect to each data point. It is the foundation for many advanced optimizers.
+            </li>
+            <li><b>Adam (Adaptive Moment Estimation): </b> Adam is an adaptive learning rate optimizer that combines the benefits of both momentum and RMSprop. It is known for its efficiency and effectiveness in training deep networks.
+            </li>
+            <li><b>RMSprop (Root Mean Square Propagation): </b> RMSprop adjusts the learning rates adaptively for each parameter, making it particularly useful for non-stationary problems.
+            </li>
+            <li><b>Adagrad: </b> Adagrad adapts the learning rate for each parameter based on its historical gradients, which can be beneficial for sparse data.
+            </li>
+            <li><b>Nadam: </b> Nadam is a combination of Nesterov's accelerated gradient (NAG) and Adam, offering improved convergence properties.
+            </li>
+          </ul>
+
+        <p>Choosing the right optimizer and understanding its parameters are essential for efficient training and achieving model convergence.
+        </p>
+
+
+        <h3>Intro to Transfer Learning</h3>
+        <p>Transfer learning is a transformative concept in the field of machine learning and artificial intelligence, and it has significantly shaped the way we approach and solve complex problems. At its core, transfer learning leverages the knowledge and experience gained from one task or domain and applies it to another related or entirely different task, ultimately enhancing the performance and efficiency of the latter.
+        </p>
+
+        <p>Imagine you're learning to play a musical instrument. You start with a simple piece and gradually progress to more complex compositions. As you become proficient in one instrument, the skills you've developed can often be transferred to another instrument. In a similar vein, transfer learning allows a machine learning model to "learn" from one task and apply its acquired knowledge to another.
+        </p>
+
+        <p>The key elements of transfer learning include:
+        </p>
+
+        <ul>
+            <li><b>Pre-trained Models: </b>  Transfer learning often begins with a pre-trained model, which is a neural network trained on a large dataset for a specific task, such as image classification. These models have already learned to recognize a wide range of features, patterns, and representations within the data.
+            </li>
+            <li><b>Fine-Tuning: </b> To adapt the pre-trained model to a new task, we fine-tune it by adjusting its internal parameters while keeping the previously learned knowledge intact. This process involves training the model on a smaller dataset related to the new task.
+            </li>
+            <li><b>Reusability: </b> Transfer learning capitalizes on the idea that knowledge gained from one task is not only useful but also reusable. Models that excel in one domain, such as natural language processing, can be employed to boost performance in completely different domains like image recognition or medical diagnosis.
+            </li>
+          </ul>
+
+        <p>Transfer learning brings about several benefits:        </p>
+        <ul>
+            <li><b>Improved Efficiency: </b>  Training a deep neural network from scratch can be computationally expensive and time-consuming. Transfer learning accelerates this process by starting with a model that has already learned valuable features.
+            </li>
+            <li><b>Enhanced Performance: </b> By transferring knowledge from pre-trained models, we can achieve superior performance on new tasks with limited data. It's especially beneficial when dealing with small or scarce datasets.
+            </li>
+            <li><b>Real-world Applications: </b> Transfer learning has been instrumental in various real-world applications, including image recognition, natural language understanding, speech recognition, and even robotics. It empowers models to generalize better and solve complex problems more effectively.
+            </li>
+          </ul>
+
+        <p>Common Transfer Learning Models:</p>
+        <ul>
+            <li><b>VGG (Visual Geometry Group):</b> VGG networks are often used for image classification tasks. They have been widely adopted in computer vision applications, and their simplicity makes them a good starting point for transfer learning.</li>
+            <li><b>ResNet (Residual Networks):</b> esNet models have achieved state-of-the-art results in image classification and are particularly effective for very deep networks with hundreds of layers.</li>
+            <li><b>Inception (GoogLeNet):</b>  Inception models are well-suited for image classification, object detection, and image segmentation tasks. They are known for their efficiency and accuracy.</li>
+            <li><b>MobileNet:</b> MobileNet is ideal for mobile and embedded applications, including image classification and object detection on smartphones and IoT devices.</li>
+            <li><b>BERT (Bidirectional Encoder Representations from Transformers):</b> BERT has had a profound impact on tasks like text classification, sentiment analysis, named entity recognition, and question-answering in NLP.</li>
+            <li><b>GPT (Generative Pre-trained Transformer):</b> GPT models have been used for a wide range of NLP tasks, including text generation, translation, summarization, and chatbots.</li>
+            <li><b>YOLO (You Only Look Once):</b> YOLO is commonly used in real-time object detection applications, such as surveillance, autonomous vehicles, and robotics.</li>
+            <li><b>DenseNet (Densely Connected Convolutional Networks):</b> DenseNet models are effective for image classification tasks, offering high accuracy with fewer parameters.</li>
+            <li><b>Xception:</b> Xception is suitable for image classification and object recognition tasks, offering a good trade-off between accuracy and model size.
+            </li>
+        </ul>
+
+        <p>When applying transfer learning, you can fine-tune these models on your specific tasks, saving significant training time and often achieving state-of-the-art results with relatively small amounts of task-specific data. The choice of the pre-trained model should depend on the nature of your problem and your available computing resources.</p>
+
+
+
+        <h3>Conclusion</h3>
+
+        <p>In this module, we've covered a wide array of topics, starting with the basics of neural networks and Convolutional Neural Networks (CNNs). You've delved into the intricacies of CNN architecture, understanding how these networks can learn to recognize patterns, objects, and features within images. The mysteries of convolution, pooling, and feature extraction have been unveiled, allowing you to harness the power of CNNs in various computer vision tasks.
+        </p>
+        <p>The next module is a Transfer Learning Challenge! Feel free to search up different models and try them out as you go through the challenge! Good luck!</p>
+
+        <div id="quiz">
+            <h3>Test Your Knowledge</h3> <!-- Change the header size to h3 -->
+            <p>No excercises for this section! Complete the challenge project in the next module!</p>
+        </div>
+
+        <div class="chatbox">
+            <div class="chatheader">
+                eMiLy Chat Bot
+                <button class="minimize-btn" onclick="toggleChat()">Maximize</button>
+            </div>
+            <div class="chatlogs" id="chatlogs">
+                <div class="chat user"></div>
+                <div class="chat ai">Hi, I am eMiLy! How may I help you today?</div>
+                <!-- Chat messages will be added here using JavaScript -->
+            </div>            
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </main>
+    <!-- <div id="chatbot-popup">
+        <div id="chatbot">
+            <div id="chat-window">
+                <div id="chat-output"></div>
+                <input type="text" id="user-input" placeholder="Ask eMiLy for help!">
+            </div>
+        </div>
+    </div> -->
+    <script src="module5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.24.1/plugins/autoloader/prism-autoloader.min.js"></script>
+</body>
+</html>

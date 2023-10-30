@@ -1,0 +1,170 @@
+/* Import the Roboto Light and Roboto Bold fonts from Google Fonts */
+/* @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap'); */
+
+/* styles.css */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #0263cc;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    /* font-family: 'Roboto', bold; */
+}
+
+
+header img {
+    max-width: 50%; /* Ensure the image doesn't exceed the header width */
+    height: auto; /* Maintain the image's aspect ratio */
+}
+
+/* New styles for the navigation bar */
+.navbar {
+    background-color: #ebf2ff;
+    text-align: left;
+    padding: 10px 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #0263cc;
+    font-weight: normal;
+}
+
+.navbar a:hover {
+    font-weight: bold;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.module-card {
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-decoration: none; /* Remove underlines for links */
+    color: #333; /* Change text color */
+    background-color: #f4f4f4; /* Background color */
+    cursor: pointer; /* Add pointer cursor to indicate interactivity */
+    transition: background-color 0.3s ease; /* Add transition effect for hover */
+}
+
+.module-card:hover {
+    background-color: #ebf2ff; /* Lighter pink on hover */
+}
+
+.module-info {
+    flex-grow: 1;
+    padding-right: 20px;
+}
+
+/* .course-button {
+    background-color: #ffcccb; 
+    color: #333;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+} */
+
+.course-button:hover {
+    background-color: #ffebf9; /* Lighter pink on hover */
+}
+
+h1 {
+    font-family: "Helvetica Neue", sans-serif;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin: 0; /* Remove margin to prevent extra spacing */
+}
+
+/* .progress-circle {
+    width: 40px;
+    height: 40px;
+    background-color: transparent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 4px solid #007BFF;
+} */
+
+/* Add donut-like progress circles */
+.progress-indicator {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 5px solid #c7c6c6;
+    /* border-top-color: #007BFF; */
+    border-radius: 50%;
+    animation: fillDonut 1s;
+}
+
+
+/* ... Rest of the CSS remains the same ... */
+
+
+/* Style the text in the progress circle */
+.progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: #007BFF;
+}
+
+
+
+
+/* Keyframes for filling the donut */
+/* @keyframes fillDonut {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+} */
+
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #0263cc;
+    color: #fff;
+}

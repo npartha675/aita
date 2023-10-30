@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+
+    <title>AITA Survey</title>
+</head>
+<body>
+    <div class="splash">
+        <!-- <h1>Welcome to AITA</h1>
+        <p>Tell me a Little Bit About Yourself</p> -->
+        <img src="AITA.gif" alt="Splash Image">
+    </div>
+    <div class="form-container">
+        <!-- <h2>Take this short survey so we can customize the course to your needs!</h2> -->
+        <h2>Please tell us a little bit about yourself so we can personalize this course for you!</h2>
+        <form id="survey-form">
+            <label for="name">What is your name?</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="age">How old are you?</label>
+            <input type="number" id="age" name="age" required>
+
+            <label for="gender">What is your gender?</label>
+            <input type="text" id="gender" name="gender" required>
+
+            <label for="hobbies">What are your hobbies? What do you like?</label>
+            <input type="text" id="hobbies" name="hobbies" required>
+
+
+            <label for="python-exp">From 1-5 how experienced are you in programming in Python?</label>
+            <select id="python-exp" name="python-exp">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="ai-knowledge">From 1-5 how much do you know about AI?</label>
+            <select id="ai-knowledge" name="ai-knowledge">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+
+            <label for="ai-depth">How much in-depth do you want to go into AI?</label>
+            <select id="ai-depth" name="ai-depth">
+                <option value="beginner">Beginner</option>
+                <option value="medium">Medium</option>
+                <option value="advanced">Advanced</option>
+            </select>
+            <p></p>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
