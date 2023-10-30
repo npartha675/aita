@@ -1,5 +1,6 @@
 # Aita
 Congressional App Challenge: AITA - AI For All: Fair, Fun, Personalized
+V 1.0; October 29,2023; Nidhi Parthasarathy
 
 Aita is an online educational app to bridge the gap in AI knowledge and ethics, and create a more equitable AI landscape, especially for under-served and special-needs communities. It does so in a unique way: “using AI to teach AI,” personalizing education for diverse backgrounds, at scales of tens of thousands of students.
 
