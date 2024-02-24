@@ -19,125 +19,265 @@
     </nav>
     <header>
         
-        <h1>Important Python Libraries</h1>
+        <!-- <h1>Important Python Libraries</h1> -->
+        <img src="important python libraries.png" alt="Your Image Alt Text">
     </header>
     <main>
-        <p>Now that we understand python we can learn about some of the important libraries in python that are very useful in Machine Learning.</p>
+        <p>Now that we understand python we can learn about some of the important libraries in python that are very useful in Machine Learning. Each library that we go over will have multiple interactive colabs to go with it. It is highly reccomended that the lesson is learned with the colabs and the material on the website is used as just a guide.</p>
+
+
+        <h3>Table of Contents and Links to Interactive Colab</h3>
+        <p>• <a href="https://colab.research.google.com/drive/1SQ4Gqk1iVGDYFv3DENCPcwlcT9KTCJ-y?usp=sharing">Getting Started with Pandas: Your Gateway to Data Manipulation</a></p>
+        <p>• <a href="https://colab.research.google.com/drive/1X2yBWQ5NH4LR5nstyV8cSD4KK-aVJnDr?usp=sharing">Cleaning Data with Pandas: Data Processing</a></p>
+        <p>• <a href="https://colab.research.google.com/drive/1LQhS9q-RsKeW0ZA4iiD6sBzbT3XsOb4Q?usp=sharing">Analying Pandas Data Frames</a></p>
+        <!-- <p><a href="">title</a></p> -->
 
         <h3><i>Getting Started with Pandas: Your Gateway to Data Manipulation</i></h3>
 
-        <p>Pandas is a fundamental library for data analysis in Python. It provides essential tools for beginners to manipulate, clean, and explore data effectively. In this lesson, we will cover key Pandas concepts through practical examples, with a focus on data handling. </p>
-
-        <h3>What is Pandas?</h3>
-        <p>
-            Pandas is a Python library for data manipulation. It offers data structures like DataFrames and Series, enabling you to work with structured data seamlessly. You can think of DataFrames as tables where data is organized into rows and columns.
-        </p>
-
-        <h3>Installing Pandas</h3>
-        <p>
-            To use Pandas, you need to install it first. Open your terminal or command prompt and run the following command:
-        </p>
-
-        <pre><code class="language-python">
-    pip install pandas
-        </code></pre>
+        <p>Pandas is a Python library for data manipulation. It offers data structures like DataFrames and Series, enabling you to work with structured data seamlessly. You can think of DataFrames as tables where data is organized into rows and columns. <b>Click on <a href="https://colab.research.google.com/drive/1SQ4Gqk1iVGDYFv3DENCPcwlcT9KTCJ-y?usp=sharing">this</a> link to get an interactive version of this content and see how these commands work in action! You can also open your own colab and follow along with the commands shown below!</b></p>
 
         <h3>Importing Pandas</h3>
         <p>
-            Before we can use Pandas, we must import it into our Python environment (Google Colab):
+           The first thing to do when using any library is to import the library.
         </p>
+
         <pre><code class="language-python">
     import pandas as pd
         </code></pre>
 
-        <h3>
-            Loading Data
-        </h3>
+        <h3>Reading a CSV File</h3>
         <p>
-            One of Pandas' superpowers is its ability to load data from various sources. For instance, you can load data from a CSV file with a single line of code:
+            Lets begin by reading a csv file. A csv file is a file with comma seperated values. There are a few ways you can upload a csv file into a colab notebook.
         </p>
+        <p><b>1.</b> Click on the folder icon on the left hand side of the notebook. Click on the upload file button on the top left corner. Upload the desired CSV file.</p>
+
         <pre><code class="language-python">
-    # Load data from a CSV file
-    data = pd.read_csv('your_dataset.csv')
+    dataset = pd.read_csv(/filename.csv)
         </code></pre>
 
-        <h3>Exploring Data</h3>
-        <p>Now, let's explore some essential Pandas functions for data exploration.        </p>
-        <h4>•) Viewing Data</h4>
-        <p>You can quickly take a peek at your data using the head() function:        </p>
+        <p><b>2.</b> Use drive to upload the csv file using the code below.</p>
+
         <pre><code class="language-python">
-    # Display the first few rows of the DataFrame
-    print(data.head())
-        </code></pre>
-        <p>You can also add a number as a parameter to indicate how many rows you want to see</p>
-        <pre><code class="language-python">
-    # Display the first 5 rows of the DataFrame
-    print(data.head(5))
+    from google.colab import drive
+    drive.mount('/content/drive')
+    dataset = pd.read_csv(/content/drive/MyDrive/filename.csv)
         </code></pre>
 
-        <h4>•) Data Types</h4>
-        <p>Pandas makes it simple to generate summary statistics for your dataset:</p>
-        <pre><code class="language-python">
-    # Calculate summary statistics like mean, min, max, and more
-    print(data.describe())
-        </code></pre>
+        <p><b>3.</b> You can upload a csv from a URL which will be what we do for this example Pandas lesson.</p>
 
-        <h4>•) Summary Statistics</h4>
-        <p>Pandas offers multiple ways to manipulate your data.        </p>
         <pre><code class="language-python">
-    # Display the data types of each column
-    print(data.dtypes)
-        </code></pre>
-
-        <h3>Data Manipulation</h3>
-        <p>Now, let's explore some essential Pandas functions for data exploration.        </p>
-        <h4>•) Filtering Data        </h4>
-        <p>Filtering data based on specific conditions is a common task:</p>
-        <pre><code class="language-python">
-    # Filter data where a column meets a condition
-    filtered_data = data[data['column_name'] > 10]
-        </code></pre>
-
-        <h4>•) Renaming Columns</h4>
-        <p>You can easily rename columns for clarity:</p>
-        <pre><code class="language-python">
-    # Rename a column
-    data = data.rename(columns={'old_name': 'new_name'})
-        </code></pre>
-
-        <h4>•) Handling Missing Data</h4>
-        <p>Pandas provides ways to deal with missing values:</p>
-        <pre><code class="language-python">
-    # Drop rows with missing values
-    data = data.dropna()
+    data_url ='https://drive.google.com/file/d/1CxgB3ibIXwwe1d_E-1qiglUwWECCxKOa/view?usp=sharing' # dataset from <https://people.sc.fsu.edu/~jburkardt/data/csv/csv.html>
+    data = 'https://drive.google.com/uc?id=' + data_url.split('/')[-2] # extracts the id portion of the link
             
-    # Fill missing values with a specific value
-    data['column_name'] = data['column_name'].fillna(0)
-        </code></pre>
+    df = pd.read_csv(data)
+                </code></pre>
 
-        <h4>•) Sorting Data</h4>
-        <p>Sort data based on column values:</p>
+        <p>To see the first few rows of the data frame you can use df.head(). If you add a number parameter it will show that many rows of the dataframe.</p>
         <pre><code class="language-python">
-    # Sort data by a specific column in ascending order
-    sorted_data = data.sort_values(by='column_name')
+    df.head(num_rows)
         </code></pre>
+        
 
-        <h4>•) Grouping and Aggregating Data</h4>
-        <p>Group data for summary statistics:</p>
+        <h3>Accessing Elements of a Data Frame</h3>
+        <p>
+            Great job so far! Now that we have created a data frame. Lets learn how to access elements of a data frame.
+        </p>
+
+        <p>To return a specific row you can use .loc[]</p>
+
         <pre><code class="language-python">
-    # Group data by a column and calculate the mean
-    grouped_data = data.groupby('group_column')['value_column'].mean()
+    df.loc[0]
         </code></pre>
 
-        <h3>Conclusion</h3>
+        <p>You can add a list of index values to see different rows.</p>
 
-        <p>Pandas is an invaluable tool for beginners and professionals alike when working with data in Python. In this lesson, we've covered essential data loading, exploration, and manipulation functions that are vital for data analysis. As you continue your data journey, mastering Pandas will be one of your strongest assets.        </p>
-        <p>Experiment with these Pandas functions and apply them to your datasets. The more you practice, the more confident you'll become in using Pandas for your data analysis needs. Happy data manipulation!        </p>
+        <pre><code class="language-python">
+    df.loc[[0,2]]
+        </code></pre>
 
-        <p>Please learn more about Pandas <a href="https://www.w3schools.com/python/pandas/default.asp">here</a> or through the Pandas <a href="https://pandas.pydata.org/docs/">documentation</a> before completing the Test For Knowledge section. The content here is only a quick overview of the multitude of capabilities pandas has.</p>
+        <p>To look for a specific condition you can use .loc like below.</p>
+
+        <pre><code class="language-python">
+    df.loc[df['Sex'] == 'F']
+        </code></pre>
+
+        <p>It's as easy as that!! Great! Now what if we want a specific column. The syntax to find a column is very similar to finding the value of a key in a dictionary.</p>
+
+        <pre><code class="language-python">
+    df["Sex"]
+                </code></pre>
+
+        <p>So how do we find a specific element in a specific row and column?? You guessed it!</p>
+
+        <pre><code class="language-python">
+    df.loc[0]["Sex"] # to get the gender of the 0th row!
+        </code></pre>
+    
+        <h3>Finding Statistics</h3>
+
+        <p>You can use df.describe() to find different metrics like count, mean, std, min, and interquartile ranges of the dataframe.</p>
+
+        <pre><code class="language-python">
+    df.describe()
+        </code></pre>
+
+        <h3>Next...</h3>
+        <p>Great Job! Now that we know the basics of using pandas lets see how we can use Pandas to clean data!</p>
+        <p><b>Click on <a href="https://colab.research.google.com/drive/1SQ4Gqk1iVGDYFv3DENCPcwlcT9KTCJ-y?usp=sharing">this</a> link for the next interactive colab. *highly reccomended to use the colab for better understanding*</b></p>
+
+
+        <h3><i>Cleaning Data with Pandas: Data Processing</i></h3>
+        <p>Often times data is incomplete or found from many different sources causing there to be lots of formatting issues in the data. For this reason it is integral to be able to clean the data before beginning.</p>
+        <pre><code class="language-python">
+    import pandas as pd
+    data_url = "https://drive.google.com/file/d/1UpuhrCsaSN_zLk2whMPE1CAAJdi8Cbur/view?usp=sharing"
+    data='https://drive.google.com/uc?id=' + data_url.split('/')[-2]
+    df = pd.read_csv(data)
+        </code></pre>
+        <h3>Introducing the Data</h3>
+        <p>Here is the data that we will be using. There are certain portions of the data that is missing. For example the ages of the 12th- 53rd players are all missing and replaced with NaN (Not a Number) in the dataset. There are also numbers that are in the wrong format ("seventy three" instead of 73) and duplicates of the same person. Please run this code on a colab notebook to view the dataset!</p>
+        <pre><code class="language-python">
+    df.head(10)
+         </code></pre>
+
+         <h3>How do you fix missing data?</h3>
+         <p>Lets start by learning how to fix missing data. There are a few approaches you can take to solving the problem of missing data depending on how large your dataset is and how accurate you want your results to be.</p>
+         <p>If your data is large enough the easiest way to tackle missing data is to just remove all rows with missing data.</p>
+         <pre><code class="language-python">
+    new_df = df.dropna()
+    print("original length:", len(df), "new length:", len(new_df))
+    new_df.head(10)
+        </code></pre>
+
+        <p>As you can see in the head of the dataset. The new dataframe has removed all the columns that had missing values. (If you want to change the original DataFrame you can do df.dropna(inplace = True)).</p>
+        <p>While removing all missing entrties can be helpful with a large dataset it can be detrimental otherwise. Machine learning finds patterns from data and without enough data it will not be able to find the correct patterns. In this case there are a few ways you can tackle this problem.</p>
+
+        <p><b>1.</b> Replace all the NaN values with a specific number.</p>
+        <pre><code class="language-python">
+    new_df = df.fillna(130) # add a second parameter inplace == True if you want to change the orignal dataframe
+    new_df.head(10)
+        </code></pre>
+
+        <p>Now all the NaN values have been replaced with 130, but if you notice carefully our original dataset had NaN values in different columns. What if we want to change the NaN values specific to the column that they are in.</p>
+        <pre><code class="language-python">
+    new_df = df.copy()
+    new_df["Age"].fillna(0, inplace=True)
+    new_df.head(15) # look at 10-14 ages
+        </code></pre>
+
+        <p>Great now we have changed a specific columns NaN values. However, just replacing the NaN values with an arbritrary number is not a very good replacement as it can skew our results a lot depending on how man NaN values there are in the dataset. There has to be a better way to replace the NaN values but not skew the dataset in any certain way. That brings us to our second technique of replacing. We can replace with the mean, median, or mode.</p>
+
+        <pre><code class="language-python">
+    new_df = df.copy()
+    new_df["Age"].fillna(df["Age"].mean(), inplace=True)
+    new_df.head(15) # look at 10-14 ages
+        </code></pre>
+
+        <p><b>Try it yourself: </b>Try changing up the label and the metric to see how the placeholder value changes!</p>
+        <p>Hint: for .mode() you will have to do .mode()[0]</p>
+
+        <h3>Fixing incorrect format</h3>
+        <p>During your experimentation you may have noticed you weren't able to cahnge the label to 'Height'. Why was this? Well, if you look at the data, on row 3 the height value is in the wrong format. It is written as a string 'seventy two' instead of the number seventy two. How do we fix this?</p>
+        <p>In this case to best way to solve the issue is to brute force it. You can go through and see what values are in the wrong format and have them manually changed like so.</p>
+        <pre><code class="language-python">
+    new_df = df.copy()
+    new_df.loc[3, 'Height'] = 72
+    new_df.head(5)
+    # new_df["Height"].astype('int64') once removing NaN because it currently has the dtype of object due to the incorrect formatting issue and to find the mean we need it to be an int
+        </code></pre>
+        <p>Sometimes, there will be dates in the incorrect format. In that case you can do the code below.</p>
+        <pre><code class="language-python">
+    df['Date'] = pd.to_datetime(df['Date']) # replaces incorrrect format with NaT (Not a Time)
+    df.dropna(subset=['Date'], inplace = True)
+        </code></pre>
+
+        <h3>What about duplicates?</h3>
+        <p>Okay! So we were able to avoid missing numbers and incorrect formatting issues. Now what about duplicates? Well, it is actually very easy to remove duplicates.</p>
+        <pre><code class="language-python">
+    new_df = df.drop_duplicates()
+    new_df.head()
+        </code></pre>
+
+        <h3>Putting it all together</h3>
+        <pre><code class="language-python">
+    # Replace incorrect formatting issues
+    df.loc[3, 'Height'] = 72
+    pd.to_numeric(df['Height'])
+    # Replace all NaN values with the mean of the column
+    df["Age"].fillna(df["Age"].mean(), inplace=True)
+    df["Weight"].fillna(df["Weight"].mean(), inplace=True)
+    df["Height"].fillna(0, inplace = True)
+    df["Height"] = df["Height"].astype('int64')
+    df["Height"] = df["Height"].replace(0, df["Height"].mean()).ffill()
+
+    # Drop Duplicates
+    df.drop_duplicates(inplace=True)
+
+    df.head(15)
+        </code></pre>
+        <h3>Next...</h3>
+        <p>Amazing! Now that we know how to clean data with Pandas, lets see how we can analyze our cleaned data! </p>
+        <p><b>To view the next interactive colab click on <a href="https://colab.research.google.com/drive/1LQhS9q-RsKeW0ZA4iiD6sBzbT3XsOb4Q?usp=sharing">this</a> link.</b></p>
+
+        <h3><i>Analyzing Pandas Data Frames</i></h3>
+        <pre><code class="language-python">
+    import pandas as pd
+    data_url = "https://drive.google.com/file/d/11vuaeb6DbRvguBVWnncfkzsmHknzlAia/view?usp=sharing"
+    data = 'https://drive.google.com/uc?id=' + data_url.split('/')[-2] # extracts the id portion of the link
+    df = pd.read_csv(data)
+    df.head(5)
+        </code></pre>
+
+        <p>When creating an ML model, oftentimes you do not use every column of data as it is not feasable. Instead you choose the labels that have a large correlation to each other to find trends within the dataset. Pandas makes it easy to find these correlations using the .corr method. Lets see how it works.</p>
+<pre><code class="language-python">
+    df.corr()
+        </code></pre>
+        <p>As you can see df.corr() shows the correlation of every column against each other. 1 indicates a perfect positive correlation (meaning that they are the same and increase/decrease together),-1 indicates a perfext negative correlation (meaning that one increases while the other decreases at the same rate), and 0 indicates no correlation at all. In the correlation above we can see that Taxes and Sell have a strong positive correlation (0.997) while Age and Sell has close to no correlation.</p>
+        
+        <p><b>Try it yourself:</b> What other values have a high correlation? Low? None?</p>
+
+        <p>We can use a library called seaborn to better visualize these correlations with a heat map.</p>
+
+        <pre><code class="language-python">
+    import seaborn as sns
+
+    # load the Auto dataset
+    auto_df = sns.load_dataset('mpg')
+
+    # calculate the correlation matrix on the numeric columns
+    corr = df.corr()
+
+    # plot the heatmap
+    sns.heatmap(corr)
+        </code></pre>
+
+        <p>As you can see the lightest ones have the best positive correlation and the darkest ones have the best negative correlation. We can also use matplotlib to better visualize the relationships between two columns. We will go through more of matplotlib and pandas in the next lesson, but here is a quick introduction.</p>
+        <pre><code class="language-python">
+    import matplotlib.pyplot as plt
+
+    df.plot()
+    plt.show()
+        </code></pre>
+
+        <pre><code class="language-python">
+    df.plot(kind = 'scatter', x = 'Sell', y = 'List')
+    plt.show()
+        </code></pre>
+
+        <pre><code class="language-python">
+    df.plot(kind = 'scatter', x = 'Sell', y = 'Age')
+    plt.show()
+        </code></pre>
+
+        <h3><i>Conclusion</i></h3>
+
+        <p>Pandas is an invaluable tool for beginners and professionals alike when working with data in Python. In this lesson, we've covered essential data loading, cleaning, and analyzing functions that are vital in machine learning. As you continue your data journey, mastering Pandas will be one of your strongest assets.        </p>
+        <p>Experiment with these Pandas functions and apply them to your datasets. The more you practice, the more confident you'll become in using Pandas for your data analysis needs. Happy data manipulation!</p>
+
+        <p>Please learn more about Pandas through the Pandas <a href="https://pandas.pydata.org/docs/">documentation</a>.</p>
         <!-- Add more sections as needed -->
         <div id="quiz">
-            <h3>Test Your Knowledge</h3> <!-- Change the header size to h3 -->
+            <h3>Pandas: Test Your Knowledge</h3> <!-- Change the header size to h3 -->
             <p>Complete the following excercises in <a href="https://w3schools.com/python/pandas/pandas_exercises.asp">this</a> link.</p>
         </div>
 

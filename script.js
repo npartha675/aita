@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 alert("You've been assigned the beginner course. Continue...");
             }
             window.location.href = "https://ai-ta.my.canva.site/home";
-        } else if ((aiKnowledge <= 4 && aiDepth <= 4) && aiDepth === "medium") {
+        } else if ((aiKnowledge <= 4 && aiDepth <= 4) || aiDepth === "medium") {
             // Redirect to the medium level course site
             alert("You've been assigned the medium course. Continue...");
             window.location.href = "med_course/course.html?username="+name+"&userage="+age+'&usergender='+gender+'&userhobbies='+hobbies;

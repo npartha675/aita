@@ -1,5 +1,5 @@
 var isMinimized = true;
-var chatStarted = false; // Add this flag
+var chatStarted = false; 
 
 const name = localStorage.getItem("username");
 const age = localStorage.getItem("userage");
@@ -9,7 +9,7 @@ const gender = localStorage.getItem("usergender");
 // Get the user input element
 var userInput = document.getElementById("user-input");
 const chatHistory = [];
-const apiKey = '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';
+const apiKey = '';
 
 // Add an event listener to capture keypress events
 userInput.addEventListener("keypress", function(event) {
